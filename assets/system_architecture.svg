@@ -1,146 +1,124 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 560" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="100%" height="100%">
   <defs>
-    <linearGradient id="grad-user" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#4fd1c5" stop-opacity="0.2"/>
-      <stop offset="100%" stop-color="#319795" stop-opacity="0.4"/>
-    </linearGradient>
-    <linearGradient id="grad-engine" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#63b3ed" stop-opacity="0.2"/>
-      <stop offset="100%" stop-color="#3182ce" stop-opacity="0.4"/>
-    </linearGradient>
-    <linearGradient id="grad-kb" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#9f7aea" stop-opacity="0.2"/>
-      <stop offset="100%" stop-color="#6b46c1" stop-opacity="0.4"/>
-    </linearGradient>
-    <linearGradient id="grad-card" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1e293b"/>
-      <stop offset="100%" stop-color="#0f172a"/>
-    </linearGradient>
-    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
-      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.5"/>
-    </filter>
     <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1 L 10 5 L 0 9 z" fill="#38bdf8"/>
-    </marker>
-    <marker id="arrow-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1 L 10 5 L 0 9 z" fill="#4ade80"/>
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#000000"/>
     </marker>
   </defs>
 
   <!-- Background -->
-  <rect width="950" height="560" rx="16" fill="#0b1120"/>
-  <rect width="950" height="560" rx="16" fill="none" stroke="#1e293b" stroke-width="2"/>
+  <rect width="900" height="480" fill="#ffffff" stroke="#000000" stroke-width="1"/>
 
   <!-- Title -->
-  <text x="475" y="42" text-anchor="middle" fill="#f8fafc" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="0.5">
-    NetDiag Expert System - Architectural Structure
+  <text x="450" y="32" text-anchor="middle" fill="#000000" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold">
+    Figure 1: NetDiag Expert System Architecture
   </text>
-  <text x="475" y="65" text-anchor="middle" fill="#94a3b8" font-family="Segoe UI, Arial, sans-serif" font-size="12">
-    Classic Expert System Reference Architecture with Independent Inference Engine &amp; Knowledge Base
+  <line x1="40" y1="46" x2="860" y2="46" stroke="#000000" stroke-width="1"/>
+
+  <!-- LAYER 1: USER & INTERFACE -->
+  <rect x="40" y="70" width="240" height="370" fill="#fafafa" stroke="#000000" stroke-width="1.5"/>
+  <rect x="40" y="70" width="240" height="30" fill="#eeeeee" stroke="#000000" stroke-width="1.5"/>
+  <text x="160" y="90" text-anchor="middle" fill="#000000" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold">
+    User Interface Layer
   </text>
 
-  <!-- USER / CLIENT SECTION -->
-  <g transform="translate(40, 95)" filter="url(#shadow)">
-    <rect width="240" height="420" rx="12" fill="url(#grad-card)" stroke="#38bdf8" stroke-width="1.5"/>
-    <rect width="240" height="40" rx="12" fill="url(#grad-user)"/>
-    <text x="120" y="26" text-anchor="middle" fill="#38bdf8" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">USER / INTERFACE LAYER</text>
+  <!-- User Box -->
+  <rect x="60" y="115" width="200" height="45" fill="#ffffff" stroke="#000000" stroke-width="1"/>
+  <text x="160" y="135" text-anchor="middle" fill="#000000" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold">End User / Technician</text>
+  <text x="160" y="149" text-anchor="middle" fill="#444444" font-family="Arial, Helvetica, sans-serif" font-size="9.5">Enters Symptoms / Answers Queries</text>
 
-    <!-- User icon & label -->
-    <circle cx="120" cy="75" r="20" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
-    <text x="120" y="80" text-anchor="middle" fill="#f8fafc" font-family="Segoe UI, Arial, sans-serif" font-size="16">&#128100;</text>
-    <text x="120" y="112" text-anchor="middle" fill="#f1f5f9" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="600">End User / Technician</text>
-    <text x="120" y="128" text-anchor="middle" fill="#94a3b8" font-family="Segoe UI, Arial, sans-serif" font-size="10">Provides Observed Symptoms</text>
+  <!-- Web GUI Box -->
+  <rect x="60" y="180" width="200" height="75" fill="#ffffff" stroke="#000000" stroke-width="1"/>
+  <text x="160" y="200" text-anchor="middle" fill="#000000" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold">Web Browser GUI</text>
+  <text x="70" y="218" fill="#333333" font-family="Arial, Helvetica, sans-serif" font-size="9.5">• Forward Checklist &amp; Presets</text>
+  <text x="70" y="233" fill="#333333" font-family="Arial, Helvetica, sans-serif" font-size="9.5">• Backward Guided Triage Q&amp;A</text>
+  <text x="70" y="247" fill="#333333" font-family="Arial, Helvetica, sans-serif" font-size="9.5">• HOW / WHY Explanation Panels</text>
 
-    <!-- Web GUI box -->
-    <rect x="20" y="150" width="200" height="115" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
-    <text x="120" y="172" text-anchor="middle" fill="#38bdf8" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">Web GUI (HTML/CSS/JS)</text>
-    <text x="32" y="195" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="10">&bull; Forward Checklist Consultation</text>
-    <text x="32" y="215" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="10">&bull; Backward Interactive Q&amp;A</text>
-    <text x="32" y="235" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="10">&bull; HOW &amp; WHY Explanation Panels</text>
-    <text x="32" y="255" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="10">&bull; Knowledge Base Inspector</text>
+  <!-- CLI Box -->
+  <rect x="60" y="275" width="200" height="55" fill="#ffffff" stroke="#000000" stroke-width="1"/>
+  <text x="160" y="295" text-anchor="middle" fill="#000000" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold">Command-Line Interface</text>
+  <text x="160" y="312" text-anchor="middle" fill="#444444" font-family="Arial, Helvetica, sans-serif" font-size="9.5">Interactive Terminal (cli.py)</text>
 
-    <!-- CLI box -->
-    <rect x="20" y="280" width="200" height="115" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
-    <text x="120" y="302" text-anchor="middle" fill="#4ade80" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">Terminal CLI (cli.py)</text>
-    <text x="32" y="325" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="10">&bull; Menu-Driven Shell Interface</text>
-    <text x="32" y="345" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="10">&bull; Forward &amp; Backward Prompts</text>
-    <text x="32" y="365" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="10">&bull; Terminal Explanation Facility</text>
-    <text x="32" y="385" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="10">&bull; Automated Self-Test Runner</text>
-  </g>
+  <!-- Flask API Box -->
+  <rect x="60" y="350" width="200" height="65" fill="#ffffff" stroke="#000000" stroke-width="1"/>
+  <text x="160" y="370" text-anchor="middle" fill="#000000" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold">Flask Web API (app.py)</text>
+  <text x="70" y="388" fill="#333333" font-family="Arial, Helvetica, sans-serif" font-size="9.5">• REST Endpoints (/api/forward)</text>
+  <text x="70" y="402" fill="#333333" font-family="Arial, Helvetica, sans-serif" font-size="9.5">• Session Manager (/api/backward)</text>
 
-  <!-- INFERENCE ENGINE SECTION -->
-  <g transform="translate(355, 95)" filter="url(#shadow)">
-    <rect width="240" height="420" rx="12" fill="url(#grad-card)" stroke="#60a5fa" stroke-width="1.5"/>
-    <rect width="240" height="40" rx="12" fill="url(#grad-engine)"/>
-    <text x="120" y="26" text-anchor="middle" fill="#60a5fa" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">INFERENCE ENGINE</text>
-    <text x="120" y="55" text-anchor="middle" fill="#94a3b8" font-family="Segoe UI, Arial, sans-serif" font-size="11">engine.py (Domain-Agnostic)</text>
 
-    <!-- Forward Chaining Module -->
-    <rect x="15" y="70" width="210" height="95" rx="8" fill="#1e293b" stroke="#2563eb" stroke-width="1"/>
-    <text x="120" y="90" text-anchor="middle" fill="#93c5fd" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">Forward Chaining</text>
-    <text x="25" y="110" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="10">&bull; Data-Driven (Facts &rarr; Diagnoses)</text>
-    <text x="25" y="128" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="10">&bull; Fixed-Point Rule Scan Loop</text>
-    <text x="25" y="146" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="10">&bull; Multi-Diagnosis Discovery</text>
+  <!-- LAYER 2: INFERENCE ENGINE -->
+  <rect x="330" y="70" width="240" height="370" fill="#fafafa" stroke="#000000" stroke-width="1.5"/>
+  <rect x="330" y="70" width="240" height="30" fill="#eeeeee" stroke="#000000" stroke-width="1.5"/>
+  <text x="450" y="90" text-anchor="middle" fill="#000000" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold">
+    Inference Engine (engine.py)
+  </text>
 
-    <!-- Backward Chaining Module -->
-    <rect x="15" y="180" width="210" height="110" rx="8" fill="#1e293b" stroke="#2563eb" stroke-width="1"/>
-    <text x="120" y="200" text-anchor="middle" fill="#93c5fd" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">Backward Chaining</text>
-    <text x="25" y="220" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="10">&bull; Goal-Driven (Hypothesis &rarr; Proof)</text>
-    <text x="25" y="238" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="10">&bull; Recursive AND-OR Search</text>
-    <text x="25" y="256" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="10">&bull; Interactive Fact Asking &amp; Backtrack</text>
-    <text x="25" y="274" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="10">&bull; Cycle Guard (_in_progress)</text>
+  <!-- Forward Chaining Box -->
+  <rect x="350" y="115" width="200" height="85" fill="#ffffff" stroke="#000000" stroke-width="1"/>
+  <text x="450" y="135" text-anchor="middle" fill="#000000" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold">Forward Chaining</text>
+  <text x="360" y="153" fill="#333333" font-family="Arial, Helvetica, sans-serif" font-size="9.5">• Data-driven fixed-point scan</text>
+  <text x="360" y="168" fill="#333333" font-family="Arial, Helvetica, sans-serif" font-size="9.5">• Intermediate state deduction</text>
+  <text x="360" y="183" fill="#333333" font-family="Arial, Helvetica, sans-serif" font-size="9.5">• Near-match calculation</text>
 
-    <!-- Explanation Facility Module -->
-    <rect x="15" y="305" width="210" height="95" rx="8" fill="#1e293b" stroke="#2563eb" stroke-width="1"/>
-    <text x="120" y="325" text-anchor="middle" fill="#93c5fd" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">Explanation Facility</text>
-    <text x="25" y="345" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="10">&bull; HOW: Recursive Derivation Walker</text>
-    <text x="25" y="365" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="10">&bull; WHY: Active Rule Context Inspector</text>
-    <text x="25" y="385" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="10">&bull; Complete Audit Trail Generation</text>
-  </g>
+  <!-- Backward Chaining Box -->
+  <rect x="350" y="215" width="200" height="95" fill="#ffffff" stroke="#000000" stroke-width="1"/>
+  <text x="450" y="235" text-anchor="middle" fill="#000000" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold">Backward Chaining</text>
+  <text x="360" y="253" fill="#333333" font-family="Arial, Helvetica, sans-serif" font-size="9.5">• Goal-driven depth-first proof</text>
+  <text x="360" y="268" fill="#333333" font-family="Arial, Helvetica, sans-serif" font-size="9.5">• Minimal interactive questioning</text>
+  <text x="360" y="283" fill="#333333" font-family="Arial, Helvetica, sans-serif" font-size="9.5">• Candidate backtracking</text>
+  <text x="360" y="298" fill="#333333" font-family="Arial, Helvetica, sans-serif" font-size="9.5">• Guided category triage</text>
 
-  <!-- KNOWLEDGE BASE & ENGINEER SECTION -->
-  <g transform="translate(670, 95)" filter="url(#shadow)">
-    <rect width="240" height="420" rx="12" fill="url(#grad-card)" stroke="#c084fc" stroke-width="1.5"/>
-    <rect width="240" height="40" rx="12" fill="url(#grad-kb)"/>
-    <text x="120" y="26" text-anchor="middle" fill="#c084fc" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">KNOWLEDGE BASE</text>
-    <text x="120" y="55" text-anchor="middle" fill="#94a3b8" font-family="Segoe UI, Arial, sans-serif" font-size="11">kb.py (Declarative Domain Data)</text>
+  <!-- Explanation Facility Box -->
+  <rect x="350" y="325" width="200" height="95" fill="#ffffff" stroke="#000000" stroke-width="1"/>
+  <text x="450" y="345" text-anchor="middle" fill="#000000" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold">Explanation Facility</text>
+  <text x="360" y="363" fill="#333333" font-family="Arial, Helvetica, sans-serif" font-size="9.5">• HOW: Rule derivation tree</text>
+  <text x="360" y="378" fill="#333333" font-family="Arial, Helvetica, sans-serif" font-size="9.5">• WHY: Active rule justification</text>
+  <text x="360" y="393" fill="#333333" font-family="Arial, Helvetica, sans-serif" font-size="9.5">• WHY-NOT: Missing/failed facts</text>
+  <text x="360" y="408" fill="#333333" font-family="Arial, Helvetica, sans-serif" font-size="9.5">• Open-world unknown handling</text>
 
-    <!-- KB Contents -->
-    <rect x="15" y="70" width="210" height="155" rx="8" fill="#1e293b" stroke="#7e22ce" stroke-width="1"/>
-    <text x="120" y="90" text-anchor="middle" fill="#e9d5ff" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">Production Rules &amp; Facts</text>
-    <text x="25" y="112" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="10">&bull; 30 Askable Leaf Facts</text>
-    <text x="25" y="132" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="10">&bull; 4 Intermediate Hypotheses</text>
-    <text x="25" y="152" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="10">&bull; 23 Categorized Diagnoses</text>
-    <text x="25" y="172" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="10">&bull; 28 Production Rules (IF-THEN)</text>
-    <text x="25" y="192" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="10">&bull; Actionable Troubleshooting Remedies</text>
-    <text x="25" y="212" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="10">&bull; Official External Citations &amp; URLs</text>
 
-    <!-- Knowledge Engineer / Editor -->
-    <rect x="15" y="240" width="210" height="160" rx="8" fill="#1e293b" stroke="#7e22ce" stroke-width="1"/>
-    <text x="120" y="260" text-anchor="middle" fill="#e9d5ff" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">Knowledge Acquisition</text>
-    <text x="120" y="280" text-anchor="middle" fill="#94a3b8" font-family="Segoe UI, Arial, sans-serif" font-size="10">Knowledge Engineer / Editor</text>
-    <text x="25" y="302" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="10">&bull; validate_kb() Static Linter</text>
-    <text x="25" y="322" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="10">&bull; No LLM Hallucinated Logic</text>
-    <text x="25" y="342" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="10">&bull; Microsoft Support / Windows Docs</text>
-    <text x="25" y="362" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="10">&bull; Google Public DNS Specs</text>
-    <text x="25" y="382" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="10">&bull; Dell Hardware Diagnostic Guides</text>
-  </g>
+  <!-- LAYER 3: KNOWLEDGE BASE -->
+  <rect x="620" y="70" width="240" height="370" fill="#fafafa" stroke="#000000" stroke-width="1.5"/>
+  <rect x="620" y="70" width="240" height="30" fill="#eeeeee" stroke="#000000" stroke-width="1.5"/>
+  <text x="740" y="90" text-anchor="middle" fill="#000000" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold">
+    Knowledge Base (kb.py)
+  </text>
 
-  <!-- Connectors -->
+  <!-- Production Rules Box -->
+  <rect x="640" y="115" width="200" height="70" fill="#ffffff" stroke="#000000" stroke-width="1"/>
+  <text x="740" y="135" text-anchor="middle" fill="#000000" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold">28 Production Rules</text>
+  <text x="650" y="153" fill="#333333" font-family="Arial, Helvetica, sans-serif" font-size="9.5">• IF-THEN representation</text>
+  <text x="650" y="168" fill="#333333" font-family="Arial, Helvetica, sans-serif" font-size="9.5">• Conjunctions &amp; Negation (!)</text>
+
+  <!-- Facts Box -->
+  <rect x="640" y="195" width="200" height="75" fill="#ffffff" stroke="#000000" stroke-width="1"/>
+  <text x="740" y="215" text-anchor="middle" fill="#000000" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold">Facts &amp; Hypotheses</text>
+  <text x="650" y="233" fill="#333333" font-family="Arial, Helvetica, sans-serif" font-size="9.5">• 30 Observable Leaf Facts</text>
+  <text x="650" y="248" fill="#333333" font-family="Arial, Helvetica, sans-serif" font-size="9.5">• 4 Intermediate Hypotheses</text>
+  <text x="650" y="263" fill="#333333" font-family="Arial, Helvetica, sans-serif" font-size="9.5">• 23 Terminal Diagnoses</text>
+
+  <!-- Provenance Box -->
+  <rect x="640" y="280" width="200" height="65" fill="#ffffff" stroke="#000000" stroke-width="1"/>
+  <text x="740" y="300" text-anchor="middle" fill="#000000" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold">Domain Provenance</text>
+  <text x="650" y="318" fill="#333333" font-family="Arial, Helvetica, sans-serif" font-size="9.5">• Microsoft Support &amp; Learn</text>
+  <text x="650" y="333" fill="#333333" font-family="Arial, Helvetica, sans-serif" font-size="9.5">• Google Public DNS, Dell Tech</text>
+
+  <!-- Presets Box -->
+  <rect x="640" y="355" width="200" height="65" fill="#ffffff" stroke="#000000" stroke-width="1"/>
+  <text x="740" y="375" text-anchor="middle" fill="#000000" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold">Presets &amp; Triage</text>
+  <text x="650" y="393" fill="#333333" font-family="Arial, Helvetica, sans-serif" font-size="9.5">• 10 Canonical Benchmarks</text>
+  <text x="650" y="408" fill="#333333" font-family="Arial, Helvetica, sans-serif" font-size="9.5">• 3 Problem Domains</text>
+
+
+  <!-- ARROWS BETWEEN LAYERS -->
   <!-- UI to Engine -->
-  <path d="M 280 230 L 355 230" fill="none" stroke="#38bdf8" stroke-width="2.5" marker-end="url(#arrow)"/>
-  <text x="317" y="220" text-anchor="middle" fill="#38bdf8" font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="600">Facts In</text>
-
-  <path d="M 355 350 L 280 350" fill="none" stroke="#4ade80" stroke-width="2.5" marker-end="url(#arrow-green)"/>
-  <text x="317" y="342" text-anchor="middle" fill="#4ade80" font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="600">Results + How/Why</text>
+  <line x1="280" y1="210" x2="328" y2="210" stroke="#000000" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="330" y1="240" x2="282" y2="240" stroke="#000000" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="305" y="202" text-anchor="middle" fill="#000000" font-family="Arial, Helvetica, sans-serif" font-size="8.5">Facts</text>
+  <text x="305" y="255" text-anchor="middle" fill="#000000" font-family="Arial, Helvetica, sans-serif" font-size="8.5">Results</text>
 
   <!-- Engine to KB -->
-  <path d="M 595 230 L 670 230" fill="none" stroke="#c084fc" stroke-width="2.5" marker-end="url(#arrow)"/>
-  <text x="632" y="220" text-anchor="middle" fill="#c084fc" font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="600">Queries</text>
-
-  <path d="M 670 350 L 595 350" fill="none" stroke="#60a5fa" stroke-width="2.5" marker-end="url(#arrow)"/>
-  <text x="632" y="342" text-anchor="middle" fill="#60a5fa" font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="600">Rules / Facts</text>
-
-  <!-- Knowledge Engineer Arrow -->
-  <path d="M 775 515 L 775 525 L 880 525 L 880 405" fill="none" stroke="#c084fc" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="570" y1="210" x2="618" y2="210" stroke="#000000" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="620" y1="240" x2="572" y2="240" stroke="#000000" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="595" y="202" text-anchor="middle" fill="#000000" font-family="Arial, Helvetica, sans-serif" font-size="8.5">Match</text>
+  <text x="595" y="255" text-anchor="middle" fill="#000000" font-family="Arial, Helvetica, sans-serif" font-size="8.5">Rules</text>
 </svg>
