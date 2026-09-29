@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NetDiag Expert System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>NetDiag <span>Expert System</span></h1>
+    <p class="subtitle">IT and Network Troubleshooting, a rule-based expert system with forward and backward chaining</p>
+    <nav>
+      <button class="tab-btn active" data-tab="forward">Forward Chaining Consultation</button>
+      <button class="tab-btn" data-tab="backward">Backward Chaining Consultation</button>
+      <button class="tab-btn" data-tab="kb">Inspect Knowledge Base</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- FORWARD CHAINING TAB -->
+    <section id="tab-forward" class="tab-panel active">
+      <p class="hint">
+        Tick every symptom that applies, or click a <strong>Quick Test Preset</strong> below to populate a known case.
+        Unanswered facts are treated as <em>unknown</em> (never assumed false). The data-driven engine will fire every applicable rule,
+        surfacing confirmed diagnoses, intermediate sub-hypotheses, and potential near-matches with what to check next.
+      </p>
+
+      <div class="preset-section">
+        <div class="preset-header">
+          <span class="preset-title">⚡ Quick Test Scenarios (1-Click Demonstration):</span>
+        </div>
+        <div id="preset-chips" class="preset-chips"></div>
+      </div>
+
+      <div id="facts-checklist" class="checklist"></div>
+
+      <div class="action-bar">
+        <button id="run-forward" class="primary-btn">Run Forward-Chaining Consultation</button>
+        <button id="reset-forward" class="secondary-btn">Reset All Answers</button>
+      </div>
+
+      <div id="forward-results" class="results"></div>
+    </section>
+
+    <!-- BACKWARD CHAINING TAB -->
+    <section id="tab-backward" class="tab-panel">
+      <p class="hint">
+        The engine works <strong>goal-driven</strong>, asking only the specific questions required to verify candidate hypotheses.
+        Use <strong>Guided Triage</strong> to let NetDiag evaluate relevant hypotheses for a problem category, or select a single specific hypothesis.
+      </p>
+
+      <div class="bc-mode-selector">
+        <label class="radio-label">
+          <input type="radio" name="bc-mode" value="category" checked>
+          <span><strong>Guided Triage</strong> (recommended for general troubleshooting)</span>
+        </label>
+        <label class="radio-label">
+          <input type="radio" name="bc-mode" value="single">
+          <span><strong>Target Specific Hypothesis</strong> (verify one diagnosis)</span>
+        </label>
+      </div>
+
+      <div id="bc-category-container" class="selection-box">
+        <label for="category-select">Select problem domain:</label>
+        <select id="category-select"></select>
+        <p id="category-desc" class="field-hint"></p>
+      </div>
+
+      <div id="bc-single-container" class="selection-box" style="display:none;">
+        <label for="goal-select">Hypothesis to investigate:</label>
+        <select id="goal-select"></select>
+      </div>
+
+      <button id="start-backward" class="primary-btn">Start Backward-Chaining Consultation</button>
+
+      <div id="backward-qa" class="qa-box" style="display:none;">
+        <div class="qa-badge">Inference Question</div>
+        <p id="bc-question" class="question"></p>
+        <div class="qa-buttons">
+          <button data-ans="true" class="btn-yes">Yes</button>
+          <button data-ans="false" class="btn-no">No</button>
+          <button data-ans="unknown" class="btn-unknown">Don't know</button>
+          <button id="bc-why" class="why-btn">Why do you ask?</button>
+        </div>
+        <div id="bc-why-box" class="why-box" style="display:none;"></div>
+      </div>
+
+      <div id="backward-results" class="results"></div>
+    </section>
+
+    <!-- KNOWLEDGE BASE TAB -->
+    <section id="tab-kb" class="tab-panel">
+      <p class="hint">The production rules powering both forward and backward chaining (IF-THEN form with official vendor citations).</p>
+      <div id="kb-rules"></div>
+    </section>
+  </main>
+
+  <footer>
+    NetDiag Expert System | CM3321 Logic Programming and ACS | 30 Observable Facts | 4 Intermediate Hypotheses | 23 Diagnoses | 28 Rules | 36 Automated Tests
+  </footer>
+
+<script src="app.js"></script>
+</body>
+</html>
